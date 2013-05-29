@@ -1,7 +1,7 @@
 Seven Languages in Seven Weeks [#7L7W](https://twitter.com/search?q=%237L7W)
 ===
 
-This is a self-enhancement project aimed at learning seven new languages in seven weeks. I should thank @sermoa for her blog post which I stumbled upon to start this project.
+This is a self-enhancement project aimed at learning seven new languages in seven weeks. I should thank [Aimee Rivers](https://github.com/sermoa) for her blog post which I stumbled upon to start this project.
 
 ###Languages
 My new seven programming languages differ from those chosen by the good folks at Pragmatic Programming (see DIsclaimer).
