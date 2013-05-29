@@ -12,7 +12,7 @@ My new seven programming languages differ from those chosen by the good folks at
 + [Elixir](https://github.com/languages/Elixir)
 + [Clojure](https://github.com/languages/Clojure)
 + [Haskell](https://github.com/languages/Haskell)
-+ [Mercury](https://github.com/languages/Mercury)
++ [Mercury](https://github.com/languages/Mercury). This page does not exist on Github yet because the language is still new.
 
 ###Resources
 
