@@ -68,11 +68,30 @@ vlast(L, E) :- reverse(L, [E | _]).
 
 % 6.4 - Last 2 - using recursion
 rlast([X], X).
-rlast([H | T], E) :- rlast(T, E).
+rlast([_ | T], E) :- rlast(T, E).
 
 % 6.5 - Swap first and last elements
 swapfl(A, B) :-
 	[AH | _] = A,
-	[BH | _] = B,
-	rlast(A, BH),
-	rlast(B, AH).
+	last(A, AL),
+	delete(A, AH, A1),
+	delete(A1, AL, AM),
+	append([AL | AM], [AH], B).
+
+% 6.6 - Who keeps the zebra
+% FACTS
+% livein(nationality, color).
+% haspet(nationality, pet)
+livesNextTo(A, B, L) :-
+	[A | [B | _]] = L;
+	[_ | [A | B]] = L.
+
+zebraKeeper(Houses, ZebraOwner):-
+	member([englishman, _, red], Houses),
+	member([spanish, jaguar, _], Houses),
+	livesNextTo([_, snail, _], [japanese, _, _], Houses),
+	livesNextTo([_, snail, _], [_, _, blue], Houses),
+	member([ZebraOwner, zebra, _], Houses).
+
+
+zebra(X) :- zebraKeeper([_, _, _], X).
