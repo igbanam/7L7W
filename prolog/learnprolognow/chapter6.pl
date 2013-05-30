@@ -107,7 +107,14 @@ naive_member(X,[_|T]) :- naive_member(X,T).
 naive_member_using_naive_append(X, L) :- naive_append([X], _, L).
 
 % 2. set
-lpn_set([],L).
-lpn_set([Head|Rest], O) :-
-	naive_member_using_naive_append(Head, O),
-	lpn_set(Rest, O).
+
+uniq(I, O) :-
+	append(K,[O|_],I), % if we append some list to the output to yield the input,
+	\+ append(_,[O|_],K). % there should be nothing that can be appended to the output to yield
+					% the original list. Thereby making such element in the input list uniq!
+% GNUProlog's in-built "append" is used here to reduce recursive depth.
+
+lpn_set(I, O) :-
+	findall(A,uniq(I,A),O). % gather.
+
+% 3. flatten - don't feel like doing it.
