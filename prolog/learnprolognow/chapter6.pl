@@ -95,3 +95,19 @@ zebraKeeper(Houses, ZebraOwner):-
 
 
 zebra(X) :- zebraKeeper([_, _, _], X).
+
+%%%%%%%%%%%%%%%
+%% PRACTICAL %%
+%%%%%%%%%%%%%%%
+
+% 1. naive member using naive append
+naive_member(X,[X|_]). 
+naive_member(X,[_|T]) :- naive_member(X,T).
+
+naive_member_using_naive_append(X, L) :- naive_append([X], _, L).
+
+% 2. set
+lpn_set([],L).
+lpn_set([Head|Rest], O) :-
+	naive_member_using_naive_append(Head, O),
+	lpn_set(Rest, O).
