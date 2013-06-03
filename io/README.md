@@ -1,0 +1,1 @@
+There are a few resources for the Io language since it is relatively new.
