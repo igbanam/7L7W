@@ -12,7 +12,7 @@ My new seven programming languages differ from those chosen by the good folks at
 + [Elixir](https://github.com/languages/Elixir)
 + [Clojure](https://github.com/languages/Clojure)
 + [Haskell](https://github.com/languages/Haskell)
-+ [Mercury](https://github.com/languages/Mercury)
++ [Mercury](https://github.com/languages/Mercury). This page does not exist on Github yet because the language is still new.
 
 ###Resources
 
@@ -28,6 +28,8 @@ My new seven programming languages differ from those chosen by the good folks at
   + [Prolog for Software Engineering](http://www.cs.auckland.ac.nz/~j-hamer/07.363/prolog-for-se.html) by Peter B. Reintjes
   + J-Paine's [Public Prolog Library](http://www.j-paine.org/prolog/library.html) and
   + [Artificial Intelligence through Prolog](http://faculty.nps.edu/ncrowe/book/book.html) by Neil C. Rowe
++ Erlang
+  + [Erlang Koans](https://github.com/patrickgombert/erlang-koans)
 
 Inasmuch as this is on Github, the leading website for code collaboration and sharing, I recommend you do not fork this repository to work off from; but start your own project. Choose languages which interest you, find resources to learn them and log your progress. I would suggest—if you are on this learning path—that you log your progress on Twitter using [#7L7W](https://twitter.com/search?q=%237L7W). This way we can encourage one another.
 
