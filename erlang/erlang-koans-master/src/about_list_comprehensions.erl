@@ -3,11 +3,11 @@
 -include("../resources/koans.hrl").
 
 representing_a_list() ->
-  ?ReplaceMe =:= [Item || Item <- [1, 2, 3]].
+  [1,2,3] =:= [Item || Item <- [1, 2, 3]].
 
 applying_a_function() ->
-  ?ReplaceMe =:= [Item * 2 || Item <- [1, 2, 3]].
+  [2,4,6] =:= [Item * 2 || Item <- [1, 2, 3]].
 
 applying_a_filter() ->
-  ?ReplaceMe =:= [Item || Item <- [1, 2, 3], Item rem 2 =:= 0].
+  [2] =:= [Item || Item <- [1, 2, 3], Item rem 2 =:= 0].
 
