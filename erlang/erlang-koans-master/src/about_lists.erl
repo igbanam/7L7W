@@ -3,31 +3,31 @@
 -include("../resources/koans.hrl").
 
 lists_are_not_homogenious() ->
-  NotJustFruits = [apple, banana, ?ReplaceMe, mango],
+  NotJustFruits = [apple, banana, 1, mango],
   Element = lists:nth(3, NotJustFruits),
   (Element < 2) and (Element > 0).
 
 we_can_add() ->
-  [apple, banana] ++ ?ReplaceMe.
+  [apple, banana] ++ [mango, orange].
 
 we_can_also_take_away() ->
-  [apple, banana] -- [?ReplaceMe].
+  [apple, banana] -- [apple].
 
 lists_have_heads() ->
   [Head | Tail] = [apple, banana, mango],
-  ?ReplaceMe =:= Head.
+  apple =:= Head.
 
 lists_also_have_tails() ->
   [Head | Tail] = [apple, banana, mango],
-  ?ReplaceMe =:= Tail.
+  [banana, mango] =:= Tail.
 
 constructing_with_cons() ->
-  ?ReplaceMe =:= [apple | [banana | [mango | [pear | []]]]].
+  [apple, banana, mango, pear] =:= [apple | [banana | [mango | [pear | []]]]].
 
 length_is_as_simple_as_it_seems() ->
-  ?ReplaceMe =:= length([1, 2, 3]).
+  3 =:= length([1, 2, 3]).
 
 lists_of_tuples_can_be_found_by_key() ->
   Meals = [{breakfast, eggs}, {lunch, pasta}, {dinner, burrito}],
-  {lunch, _} = lists:keyfind(?ReplaceMe, 2, Meals).
+  {lunch, _} = lists:keyfind(pasta, 2, Meals).
 
